@@ -3,6 +3,14 @@
     {
       "intent": "TelevisionOff",
       "slots": []
+    },
+    {
+      "intent": "TelevisionChangeHdmiSource",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionChangeTvSource",
+      "slots": []
     }
   ]
 }

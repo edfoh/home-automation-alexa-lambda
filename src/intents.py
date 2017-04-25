@@ -31,8 +31,28 @@ def televison_off(slots):
     answer = "switching off televison" if success else 'could not switch television off'
     return build_alexa_response(answer, card_title)
 
+def television_hdmi_source(slots):
+    card_title = 'Change Hdmi Source'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/hdmi')
+    answer = "changing hdmi source" if success else 'could not change hdmi source'
+    return build_alexa_response(answer, card_title)
+
+def television_tv_source(slots):
+    card_title = 'Change TV Source'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/tv')
+    answer = "changing tv source" if success else 'could not change tv source'
+    return build_alexa_response(answer, card_title)
+
 INTENTS = {
-    'TelevisionOff': televison_off
+    'TelevisionOff': televison_off,
+    'TelevisionChangeHdmiSource': television_hdmi_source,
+    'TelevisionChangeTvSource': television_tv_source
 }
 
 def on_intent(intent_request, session):
