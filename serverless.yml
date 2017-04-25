@@ -20,3 +20,5 @@ functions:
       HOST_ADDRESS: ${file(./config.yml):HOST_ADDRESS}
       HOST_PORT: ${file(./config.yml):HOST_PORT}
       SKILL_APPID: ${file(./config.yml):SKILL_APPID}
+      API_USERNAME: ${file(./config.yml):API_USERNAME}
+      API_PASSWORD: ${file(./config.yml):API_PASSWORD}

@@ -3,15 +3,18 @@ sys.path.insert(0, './lib')
 
 import os
 import requests
+from requests.auth import HTTPBasicAuth
 from src.helper import build_alexa_response, prepare_help_message
 
 def make_request(path):
     host = os.environ.get("HOST_ADDRESS")
     port = os.environ.get("HOST_PORT")
+    api_username = os.environ.get("API_USERNAME")
+    api_password = os.environ.get("API_PASSWORD")
     url = "http://{}:{}/{}".format(host, port, path)
 
     print("making request to url {}".format(url))
-    response = requests.post(url, timeout=5)
+    response = requests.post(url, timeout=5, auth=HTTPBasicAuth(api_username, api_password))
     if (response.status_code == 200):
         print('request successful!')
         return True
