@@ -1,4 +1,4 @@
-# home-automation-alexa-lambda
+# home-automation-alexa-skill
 
 alexa skill hosted in aws lambda that will send alexa intents relating to the television to [home-automation-api](https://github.com/edfoh/home-automation-api)
 
