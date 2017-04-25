@@ -91,4 +91,6 @@ ENV/
 # Serverless directories
 .serverless
 
+myenv/
+
 config.yml
