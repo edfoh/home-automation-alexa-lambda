@@ -1,0 +1,16 @@
+{
+  "session":{
+    "sessionId": "123145",
+    "application": {
+      "applicationId": "test"
+    }
+  },
+  "request":{
+    "requestId": "12345",
+    "type": "IntentRequest",
+    "intent": {
+      "name": "TelevisionOff",
+      "slots": []
+    }
+  }
+}

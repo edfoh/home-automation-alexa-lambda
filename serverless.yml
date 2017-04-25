@@ -1,0 +1,22 @@
+service: home-automation-alexa-skill
+
+provider:
+  name: aws
+  runtime: python2.7
+  stage: prod
+  region: us-east-1
+
+package:
+  include:
+    - src/**
+    - lib/**
+
+functions:
+  execute:
+    handler: src/handler.execute
+    events:
+      - alexaSkill
+    environment:
+      HOST_ADDRESS: ${file(./config.yml):HOST_ADDRESS}
+      HOST_PORT: ${file(./config.yml):HOST_PORT}
+      SKILL_APPID: ${file(./config.yml):SKILL_APPID}
