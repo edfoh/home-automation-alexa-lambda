@@ -11,7 +11,7 @@ def execute(event, context):
     appid = event['session']['application']['applicationId']
     print("lambda_handler: applicationId={}".format(appid))
 
-    #verify_application_id(appid)
+    verify_application_id(appid)
 
     if event['request']['type'] == "LaunchRequest":
         return prepare_help_message()

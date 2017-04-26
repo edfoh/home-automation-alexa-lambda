@@ -27,7 +27,7 @@ def televison_off(slots):
     print card_title
     sys.stdout.flush()
 
-    success = make_request('tv/command/off')
+    success = make_request('tv/command/poweroff')
     answer = "switching off televison" if success else 'could not switch television off'
     return build_alexa_response(answer, card_title)
 

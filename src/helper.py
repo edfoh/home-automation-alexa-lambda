@@ -1,6 +1,8 @@
 import sys
 sys.path.insert(0, './lib')
 
+import os
+
 def build_speechlet_response(title, output, reprompt_text, should_end_session):
   response = {}
 
@@ -58,11 +60,12 @@ def prepare_help_message():
 
 
 def verify_application_id(candidate):
-  if env('SKILL_APPID'):
-    try:
-      print "Verifying application ID..."
-      if candidate not in env('SKILL_APPID'):
-        raise ValueError("Application ID verification failed")
-    except ValueError as e:
-      print e.args[0]
-      raise
+    appId = os.environ.get("SKILL_APPID")
+    if appId != None:
+        try:
+          print "Verifying application ID..."
+          if candidate != appId:
+            raise ValueError("Application ID verification failed")
+        except ValueError as e:
+          print e.args[0]
+          raise
