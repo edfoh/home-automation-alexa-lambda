@@ -49,10 +49,52 @@ def television_tv_source(slots):
     answer = "changing tv source" if success else 'could not change tv source'
     return build_alexa_response(answer, card_title)
 
+def television_volup(slots):
+    card_title = 'Volume Up'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/volup')
+    answer = "volume up" if success else 'could not increase volume'
+    return build_alexa_response(answer, card_title)
+
+def television_voldown(slots):
+    card_title = 'Volume Down'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/voldown')
+    answer = "volume down" if success else 'could not decrease volume'
+    return build_alexa_response(answer, card_title)
+
+def television_volup_repeat(slots):
+    times = slots['Times']['value']
+    card_title = 'Volume Up Repeat'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/volup/' + times)
+    answer = "volume up" if success else 'could not increase volume'
+    return build_alexa_response(answer, card_title)
+
+def television_voldown_repeat(slots):
+    times = slots['Times']['value']
+    card_title = 'Volume Down Repeat'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/voldown/' + times)
+    answer = "volume down" if success else 'could not decrease volume'
+    return build_alexa_response(answer, card_title)
+
 INTENTS = {
     'TelevisionOff': televison_off,
     'TelevisionChangeHdmiSource': television_hdmi_source,
-    'TelevisionChangeTvSource': television_tv_source
+    'TelevisionChangeTvSource': television_tv_source,
+    'TelevisionVolumeUp': television_volup,
+    'TelevisionVolumeDown': television_voldown,
+    'TelevisionVolumeUpRepeat': television_volup_repeat,
+    'TelevisionVolumeDownRepeat': television_voldown_repeat
 }
 
 def on_intent(intent_request, session):

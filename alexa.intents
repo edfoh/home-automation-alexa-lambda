@@ -11,6 +11,32 @@
     {
       "intent": "TelevisionChangeTvSource",
       "slots": []
+    },
+    {
+      "intent": "TelevisionVolumeUp",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionVolumeDown",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionVolumeUpRepeat",
+      "slots":[
+        {
+          "name": "Times",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "TelevisionVolumeDownRepeat",
+      "slots":[
+        {
+          "name": "Times",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
     }
   ]
 }

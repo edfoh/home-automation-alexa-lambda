@@ -54,7 +54,7 @@ def build_response(session_attributes, speechlet_response):
     return response
 
 def prepare_help_message():
-    help = "You can ask me to switch off the televison, change channels, input source and volume."
+    help = "You can ask me to switch off the televison, change channels, change input source and change volume."
     card_title = "Help"
     return build_alexa_response(help, card_title)
 
