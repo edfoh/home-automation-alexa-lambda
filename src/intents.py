@@ -40,6 +40,15 @@ def television_hdmi_source(slots):
     answer = "changing hdmi source" if success else 'could not change hdmi source'
     return build_alexa_response(answer, card_title)
 
+def television_component_source(slots):
+    card_title = 'Change Component Source'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/component')
+    answer = "changing component source" if success else 'could not change component source'
+    return build_alexa_response(answer, card_title)
+
 def television_tv_source(slots):
     card_title = 'Change TV Source'
     print card_title
@@ -47,6 +56,24 @@ def television_tv_source(slots):
 
     success = make_request('tv/command/tv')
     answer = "changing tv source" if success else 'could not change tv source'
+    return build_alexa_response(answer, card_title)
+
+def television_show_source(slots):
+    card_title = 'Show Source'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/source')
+    answer = "ok" if success else 'could not perform action'
+    return build_alexa_response(answer, card_title)
+
+def television_exit(slots):
+    card_title = 'Exit'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/exit')
+    answer = "ok" if success else 'could not perform action'
     return build_alexa_response(answer, card_title)
 
 def television_volup(slots):
@@ -87,14 +114,70 @@ def television_voldown_repeat(slots):
     answer = "volume down" if success else 'could not decrease volume'
     return build_alexa_response(answer, card_title)
 
+def television_abckids(slots):
+    card_title = 'ABC Kids'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/abckidschannel')
+    answer = "changing to ABC kids" if success else 'could not change to ABC kids'
+    return build_alexa_response(answer, card_title)
+
+def television_change_channel(slots):
+    channel = slots['Channel']['value']
+    card_title = 'Change Channel'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/channel/' + channel)
+    answer = "changing channel" if success else 'could not change channel'
+    return build_alexa_response(answer, card_title)
+
+def television_keyup_repeat(slots):
+    times = slots['Times']['value']
+    card_title = 'Key Up Times'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/keyup/' + times)
+    answer = "ok" if success else 'could not perform action'
+    return build_alexa_response(answer, card_title)
+
+def television_keydown_repeat(slots):
+    times = slots['Times']['value']
+    card_title = 'Key Down Times'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/keydown/' + times)
+    answer = "ok" if success else 'could not perform action'
+    return build_alexa_response(answer, card_title)
+
+def television_mute(slots):
+    card_title = 'Mute'
+    print card_title
+    sys.stdout.flush()
+
+    success = make_request('tv/command/mute')
+    answer = "ok" if success else 'could not perform action'
+    return build_alexa_response(answer, card_title)
+
 INTENTS = {
     'TelevisionOff': televison_off,
     'TelevisionChangeHdmiSource': television_hdmi_source,
+    'TelevisionChangeComponentSource': television_component_source,
     'TelevisionChangeTvSource': television_tv_source,
+    'TelevisionShowSource': television_show_source,
+    'TelevisionExit': television_exit,
     'TelevisionVolumeUp': television_volup,
     'TelevisionVolumeDown': television_voldown,
     'TelevisionVolumeUpRepeat': television_volup_repeat,
-    'TelevisionVolumeDownRepeat': television_voldown_repeat
+    'TelevisionVolumeDownRepeat': television_voldown_repeat,
+    'TelevisionABCKids': television_abckids,
+    'TelevisionChangeChannel': television_change_channel,
+    'TelevisionMute': television_mute,
+    'TelevisionKeyUpRepeat': television_keyup_repeat,
+    'TelevisionKeyDownRepeat': television_keydown_repeat
 }
 
 def on_intent(intent_request, session):

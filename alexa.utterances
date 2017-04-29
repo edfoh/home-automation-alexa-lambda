@@ -6,26 +6,16 @@ TelevisionChangeHdmiSource change HDMI
 TelevisionChangeHdmiSource to change HDMI
 TelevisionChangeHdmiSource change HDMI source
 TelevisionChangeHdmiSource to change HDMI source
-TelevisionChangeHdmiSource change input
-TelevisionChangeHdmiSource to change input
 TelevisionChangeTvSource change TV source
 TelevisionChangeTvSource to change TV source
 TelevisionChangeTvSource watch TV
 TelevisionChangeTvSource to watch TV
-TelevisionVolumeUp to increase volume
-TelevisionVolumeUp increase volume
-TelevisionVolumeUp to higher volume
-TelevisionVolumeUp higher volume
-TelevisionVolumeUp to up volume
-TelevisionVolumeUp up volume
+TelevisionChangeComponentSource change component
+TelevisionChangeComponentSource to change component
+TelevisionChangeComponentSource change component source
+TelevisionChangeComponentSource to change component source
 TelevisionVolumeUp louder
 TelevisionVolumeUp to be louder
-TelevisionVolumeDown to decrease volume
-TelevisionVolumeDown decrease volume
-TelevisionVolumeDown to lower volume
-TelevisionVolumeDown lower volume
-TelevisionVolumeDown to down volume
-TelevisionVolumeDown down volume
 TelevisionVolumeDown softer
 TelevisionVolumeDown to be softer
 TelevisionVolumeUpRepeat to increase volume {Times} times
@@ -34,13 +24,40 @@ TelevisionVolumeUpRepeat to higher volume {Times} times
 TelevisionVolumeUpRepeat higher volume {Times} times
 TelevisionVolumeUpRepeat to up volume {Times} times
 TelevisionVolumeUpRepeat up volume {Times} times
-TelevisionVolumeUpRepeat louder {Times} times
-TelevisionVolumeUpRepeat to be louder {Times} times
 TelevisionVolumeDownRepeat to decrease volume {Times} times
 TelevisionVolumeDownRepeat decrease volume {Times} times
 TelevisionVolumeDownRepeat to lower volume {Times} times
 TelevisionVolumeDownRepeat lower volume {Times} times
 TelevisionVolumeDownRepeat to down volume {Times} times
 TelevisionVolumeDownRepeat down volume {Times} times
-TelevisionVolumeDownRepeat softer {Times} times
-TelevisionVolumeDownRepeat to be softer {Times} times
+TelevisionABCKids go to ABC kids
+TelevisionABCKids to go to ABC kids
+TelevisionABCKids change channel ABC kids
+TelevisionABCKids to change channel ABC kids
+TelevisionABCKids ABC kids
+TelevisionABCKids change to ABC kids
+TelevisionABCKids to change to ABC kids
+TelevisionABCKids watch ABC kids
+TelevisionABCKids to watch ABC
+TelevisionChangeChannel change channel {Channel}
+TelevisionChangeChannel to change channel {Channel}
+TelevisionChangeChannel channel {Channel}
+TelevisionChangeChannel go to channel {Channel}
+TelevisionChangeChannel to go to channel {Channel}
+TelevisionMute mute
+TelevisionMute to mute
+TelevisionMute to unmute
+TelevisionMute unmute
+TelevisionShowSource show source
+TelevisionShowSource source
+TelevisionExit exit
+TelevisionKeyUpRepeat key up {Times} times
+TelevisionKeyUpRepeat up {Times} times
+TelevisionKeyUpRepeat go up {Times} times
+TelevisionKeyUpRepeat move up {Times} times
+TelevisionKeyUpRepeat select up {Times} times
+TelevisionKeyDownRepeat key down {Times} times
+TelevisionKeyDownRepeat down {Times} times
+TelevisionKeyDownRepeat go down {Times} times
+TelevisionKeyDownRepeat move down {Times} times
+TelevisionKeyDownRepeat select down {Times} times

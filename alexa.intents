@@ -13,6 +13,10 @@
       "slots": []
     },
     {
+      "intent": "TelevisionChangeComponentSource",
+      "slots": []
+    },
+    {
       "intent": "TelevisionVolumeUp",
       "slots": []
     },
@@ -32,6 +36,49 @@
     {
       "intent": "TelevisionVolumeDownRepeat",
       "slots":[
+        {
+          "name": "Times",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "TelevisionABCKids",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionChangeChannel",
+      "slots":[
+        {
+          "name": "Channel",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "TelevisionMute",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionShowSource",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionExit",
+      "slots": []
+    },
+    {
+      "intent": "TelevisionKeyUpRepeat",
+      "slots": [
+        {
+          "name": "Times",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "TelevisionKeyDownRepeat",
+      "slots": [
         {
           "name": "Times",
           "type": "AMAZON.NUMBER"
