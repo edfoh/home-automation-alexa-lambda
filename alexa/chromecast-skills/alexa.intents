@@ -3,6 +3,10 @@
     {
       "intent": "ChromecastTest",
       "slots": []
+    },
+    {
+      "intent": "ChromecastGetPlaylist",
+      "slots": []
     }
   ]
 }
