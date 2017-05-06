@@ -4,7 +4,7 @@ sys.path.insert(0, './lib')
 import os
 import requests
 from requests.auth import HTTPBasicAuth
-from src.helper import build_alexa_response, prepare_help_message
+from src.helper import build_alexa_response
 
 def make_request(path):
     host = os.environ.get("HOST_ADDRESS")
@@ -21,6 +21,13 @@ def make_request(path):
     else:
         print("url {} post failed with status code {}".format(url, response.status_code))
         return False
+
+def television_test(slots):
+    card_title = 'Television Test'
+    print card_title
+    sys.stdout.flush()
+
+    return build_alexa_response('Working!', card_title)
 
 def televison_off(slots):
     card_title = 'Television Off'
@@ -163,6 +170,7 @@ def television_mute(slots):
     return build_alexa_response(answer, card_title)
 
 INTENTS = {
+    'TelevisionTest': television_test,
     'TelevisionOff': televison_off,
     'TelevisionChangeHdmiSource': television_hdmi_source,
     'TelevisionChangeComponentSource': television_component_source,
@@ -180,7 +188,7 @@ INTENTS = {
     'TelevisionKeyDownRepeat': television_keydown_repeat
 }
 
-def on_intent(intent_request, session):
+def on_tv_intent(intent_request, session):
     print("on_intent: requestId={}, sessionId={}".format(intent_request['requestId'], session['sessionId']))
 
     intent = intent_request['intent']

@@ -53,14 +53,18 @@ def build_response(session_attributes, speechlet_response):
     print response
     return response
 
-def prepare_help_message():
+def prepare_tv_help_message():
     help = "You can ask me to switch off the televison, change channels, change input source and change volume."
     card_title = "Help"
     return build_alexa_response(help, card_title)
 
+def prepare_chromecast_help_message():
+    help = "You can ask me to chromecast your youtube playlist, or play video by keyword"
+    card_title = "Help"
+    return build_alexa_response(help, card_title)
 
-def verify_application_id(candidate):
-    appId = os.environ.get("SKILL_APPID")
+def verify_application_id(prefix, candidate):
+    appId = os.environ.get("{}_SKILL_APPID".format(prefix))
     if appId != None:
         try:
           print "Verifying application ID..."

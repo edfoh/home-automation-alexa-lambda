@@ -12,13 +12,23 @@ package:
     - lib/**
 
 functions:
-  execute:
-    handler: src/handler.execute
+  tv:
+    handler: src/handler.tv
     events:
       - alexaSkill
     environment:
       HOST_ADDRESS: ${file(./config.yml):HOST_ADDRESS}
       HOST_PORT: ${file(./config.yml):HOST_PORT}
-      SKILL_APPID: ${file(./config.yml):SKILL_APPID}
+      TV_SKILL_APPID: ${file(./config.yml):TV_SKILL_APPID}
+      API_USERNAME: ${file(./config.yml):API_USERNAME}
+      API_PASSWORD: ${file(./config.yml):API_PASSWORD}
+  chromecast:
+    handler: src/handler.chromecast
+    events:
+      - alexaSkill
+    environment:
+      HOST_ADDRESS: ${file(./config.yml):HOST_ADDRESS}
+      HOST_PORT: ${file(./config.yml):HOST_PORT}
+      CHROMECAST_SKILL_APPID: ${file(./config.yml):CHROMECAST_SKILL_APPID}
       API_USERNAME: ${file(./config.yml):API_USERNAME}
       API_PASSWORD: ${file(./config.yml):API_PASSWORD}
