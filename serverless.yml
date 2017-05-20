@@ -14,6 +14,7 @@ package:
 functions:
   tv:
     handler: src/handler.tv
+    timeout: 60
     events:
       - alexaSkill
     environment:
@@ -24,6 +25,7 @@ functions:
       API_PASSWORD: ${file(./config.yml):API_PASSWORD}
   chromecast:
     handler: src/handler.chromecast
+    timeout: 60
     events:
       - alexaSkill
     environment:

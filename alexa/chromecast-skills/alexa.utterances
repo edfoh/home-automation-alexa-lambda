@@ -3,3 +3,7 @@ ChromecastTest testing
 ChromecastGetPlaylist tell me my playlist
 ChromecastGetPlaylist to tell me my playlist
 ChromecastGetPlaylist for playlist
+ChromecastPlayFirstVideoInPlaylist to play {PlaylistName}
+ChromecastPlayFirstVideoInPlaylist play {PlaylistName}
+ChromecastStop to stop
+ChromecastStop stop

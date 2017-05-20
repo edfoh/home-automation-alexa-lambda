@@ -7,6 +7,19 @@
     {
       "intent": "ChromecastGetPlaylist",
       "slots": []
+    },
+    {
+      "intent": "ChromecastPlayFirstVideoInPlaylist",
+      "slots": [
+        {
+          "name": "PlaylistName",
+          "type": "YOUTUBE_PLAYLIST"
+        }
+      ]
+    },
+    {
+      "intent": "ChromecastStop",
+      "slots": []
     }
   ]
 }
