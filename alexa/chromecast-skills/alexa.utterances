@@ -7,3 +7,15 @@ ChromecastPlayFirstVideoInPlaylist to play {PlaylistName}
 ChromecastPlayFirstVideoInPlaylist play {PlaylistName}
 ChromecastStop to stop
 ChromecastStop stop
+ChromecastPause pause
+ChromecastPause to pause
+ChromecastPlay play
+ChromecastPlay to play
+ChromecastResume resume
+ChromecastResume to resume
+ChromecastResume continue
+ChromecastResume to continue
+ChromecastPlayNext to play next
+ChromecastPlayNext play next
+ChromecastPlayPrevious to play previous
+ChromecastPlayPrevious play previous

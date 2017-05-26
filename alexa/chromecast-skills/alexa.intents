@@ -20,6 +20,26 @@
     {
       "intent": "ChromecastStop",
       "slots": []
+    },
+    {
+      "intent": "ChromecastPause",
+      "slots": []
+    },
+    {
+      "intent": "ChromecastPlay",
+      "slots": []
+    },
+    {
+      "intent": "ChromecastResume",
+      "slots": []
+    },
+    {
+      "intent": "ChromecastPlayNext",
+      "slots": []
+    },
+    {
+      "intent": "ChromecastPlayPrevious",
+      "slots": []
     }
   ]
 }
