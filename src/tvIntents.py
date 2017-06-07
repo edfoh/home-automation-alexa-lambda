@@ -14,7 +14,7 @@ def make_request(path):
     url = "http://{}:{}/{}".format(host, port, path)
 
     print("making request to url {}".format(url))
-    response = requests.post(url, timeout=5, auth=HTTPBasicAuth(api_username, api_password))
+    response = requests.post(url, timeout=30, auth=HTTPBasicAuth(api_username, api_password))
     if (response.status_code == 200):
         print('request successful!')
         return True
